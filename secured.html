@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secured Page - Western Suburbs Hack Club Wiki</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function checkPassword() {
+            const password = prompt("This page is password-protected. Enter the password:");
+            if (password !== "WSHACKCLUB25") {
+                document.getElementById("content").innerHTML = '<h1>Access Denied</h1><p>Incorrect password. Access denied.</p>';
+            }
+        }
+    </script>
+</head>
+<body onload="checkPassword()">
+    <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="list.html">All Pages</a>
+    </div>
+    <div id="content">
+        <h1>Leaders ONLY</h1>
+        <p>This page is secured for safety reasons.</p>
+        <p>Info for leaders will be stored here.</p>
+        <br>
+        <p>You will have access to a SharePoint site with access to files you need.</p>
+    </div>
+</body>
+</html>
